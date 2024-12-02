@@ -1,9 +1,8 @@
 <?php
 
-$uri = trim($_SERVER['REQUEST_URI']); // Menghilangkan karakter '/' di awal dan akhir
-
+$uri = trim($_SERVER['REQUEST_URI']);
 $uriParts = explode('?', $uri, 2);
-$route = $uriParts[0]; // Bagian rute tanpa query string
+$route = $uriParts[0];
 
 $route = str_replace('/pondok-gita', '', $route);
 $route = rtrim($route, '/');
