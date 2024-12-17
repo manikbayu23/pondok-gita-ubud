@@ -1,10 +1,17 @@
 <?php
+include 'config.php';
+
+function route($path)
+{
+    global $base_url;
+    return rtrim($base_url, '/') . $path;
+}
 
 $uri = trim($_SERVER['REQUEST_URI']);
 $uriParts = explode('?', $uri, 2);
 $route = $uriParts[0];
 
-$route = str_replace('/pondok-gita', '', $route);
+$route = str_replace($base_url, '', $route);
 $route = rtrim($route, '/');
 $route = empty($route) ? '/' : $route;
 
@@ -27,10 +34,10 @@ if (strpos($route, '/admin') === 0) {
     $path = 'views/user/pages';
     switch ($route) {
         case '/':
-            $file = "{$path}/home.php";
+            $file = "{$path}/beranda.php";
             break;
-        case '/about':
-            $file = "{$path}/about.php";
+        case '/about-us':
+            $file = "{$path}/about-us.php";
             break;
         default:
             $file = 'views/404.php'; // Halaman 404 jika route tidak ditemukan
