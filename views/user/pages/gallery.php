@@ -3,7 +3,11 @@ include __DIR__ . '/../layouts/header.php';
 
 ?>
 
+<<<<<<< HEAD:views/user/pages/home.php
 <body>
+=======
+<h1>Galeri</h1>
+>>>>>>> 24d17bd4e4ddcf8c09ecee9609726216f59aa7f1:views/user/pages/gallery.php
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">
