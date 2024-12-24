@@ -8,11 +8,16 @@
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a href="<?= route('/'); ?>" class="nav-link">Beranda</a></li>
-                <li class="nav-item"><a href="<?= route('/about-us'); ?>" class="nav-link">Tentang Kami</a></li>
-                <li class="nav-item"><a href="<?= route('/facilities'); ?>" class="nav-link">Fasilitas</a></li>
-                <li class="nav-item"><a href="<?= route('/gallery'); ?>" class="nav-link">Galeri</a></li>
-                <li class="nav-item"><a href="<?= route('/contact'); ?>" class="nav-link">Kontak</a></li>
+                <li class="nav-item <?= $route == '/' ? 'active' : '' ?>"><a href="<?= route('/'); ?>"
+                        class="nav-link">Beranda</a></li>
+                <li class="nav-item <?= $route == '/about-us' ? 'active' : '' ?>"><a href="<?= route('/about-us'); ?>"
+                        class="nav-link">Tentang Kami</a></li>
+                <li class="nav-item <?= $route == '/facilities' ? 'active' : '' ?>"><a
+                        href="<?= route('/facilities'); ?>" class="nav-link">Fasilitas</a></li>
+                <li class="nav-item <?= $route == '/gallery' ? 'active' : '' ?>"><a href="<?= route('/gallery'); ?>"
+                        class="nav-link">Galeri</a></li>
+                <li class="nav-item <?= $route == '/contact' ? 'active' : '' ?>"><a href="<?= route('/contact'); ?>"
+                        class="nav-link">Kontak</a></li>
             </ul>
         </div>
     </div>

@@ -39,6 +39,18 @@ if (strpos($route, '/admin') === 0) {
         case '/about-us':
             $file = "{$path}/about-us.php";
             break;
+        case '/facilities':
+            $file = "{$path}/facilities.php";
+            break;
+        case '/gallery':
+            $file = "{$path}/gallery.php";
+            break;
+        case '/contact':
+            $file = "{$path}/contact.php";
+            break;
+        case '/review':
+            $file = "controllers/user/review.php";
+            break;
         default:
             $file = 'views/404.php'; // Halaman 404 jika route tidak ditemukan
             break;
