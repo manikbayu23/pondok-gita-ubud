@@ -3,39 +3,6 @@ $pageTitle = 'Kontak';
 include __DIR__ . '/../layouts/header.php';
 include __DIR__ . '/../components/breadcrumb.php';
 
-$rows = [
-    [
-        'name' => 'Free WiFi',
-        'description' => 'Tetap terhubung selama menginap dengan akses WiFi gratis di seluruh area Pondok Gita Ubud',
-        'icon' => '',
-    ],
-    [
-        'name' => 'Free Parking',
-        'description' => 'Nikmati kenyamanan parkir pribadi tanpa biaya tambahan selama menginap.',
-        'icon' => '',
-    ],
-    [
-        'name' => 'Non-smoking rooms',
-        'description' => 'Semua kamar didesain sebagai area bebas rokok untuk menjaga kenyamanan dan kesehatan tamu.',
-        'icon' => '',
-    ],
-    [
-        'name' => 'Air Conditioning (AC)',
-        'description' => 'Setiap kamar dilengkapi dengan AC untuk memastikan kenyamanan Anda selama berada di Pondok Gita Ubud.',
-        'icon' => '',
-    ],
-    [
-        'name' => 'Garden',
-        'description' => 'Bersantai di taman kami yang asri, tempat yang sempurna untuk menikmati suasana tenang khas Ubud.',
-        'icon' => '',
-    ],
-    [
-        'name' => 'Terrace',
-        'description' => 'Setiap kamar memiliki akses ke teras pribadi, ideal untuk menikmati pemandangan sekitar atau bersantai di sore hari.',
-        'icon' => '',
-    ]
-];
-
 ?>
 <section class="ftco-counter " data-stellar-background-ratio="0.5">
     <div class="container">
@@ -53,7 +20,7 @@ $rows = [
                     <div class="col-md-12 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
                         <div class="block-18 text-center">
                             <div class="text">
-                                <div class="icon"><span class="flaticon-coffee-cup"></span></div>
+                                <div class="icon"><span> <i class="oi oi-mail"></i></span></div>
                                 <span>pondokgita_ubud@yahoo.com</span>
                             </div>
                         </div>
@@ -130,7 +97,7 @@ ob_start();
             method: 'POST',
             url: '/pondok-gita-ubud/review',
             data: form.serialize(),
-            dataType: 'application/json',
+            dataType: 'json',
             success: function (response) {
                 alert('success');
             }, error: function (error) {

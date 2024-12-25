@@ -1,7 +1,14 @@
 <?php
+include_once 'connection.php';
+
 $pageTitle = 'About Us';
 include __DIR__ . '/../layouts/header.php';
 include __DIR__ . '/../components/breadcrumb.php';
+
+$sql = "SELECT * FROM reviews ORDER BY id_review DESC LIMIT 10";
+$stmt = $db->prepare($sql);
+$stmt->execute();
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <section class="ftco-about d-md-flex mb-3">
@@ -33,26 +40,34 @@ include __DIR__ . '/../components/breadcrumb.php';
                 <h2 class="mb-4">Ulasan</h2>
             </div>
         </div>
-        <div class="owl-carousel owl-theme">
-            <?php
-            for ($i = 0; $i < 10; $i++) {
-                ?>
-                <div class="item">
-                    <div class="testimony">
-                        <blockquote>
-                            <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                unorthographic life One day however a small.&rdquo;</p>
-                        </blockquote>
-                        <div class="author d-flex mt-4">
-                            <div class="name align-self-center">Louise Kelly <span class="position">Illustrator
-                                    Designer</span></div>
+        <?php
+        if (count($rows)):
+            ?>
+            <div class="owl-carousel owl-theme">
+                <?php
+                foreach ($rows as $key => $row) {
+                    ?>
+                    <div class="item">
+                        <div class="testimony">
+                            <blockquote>
+                                <p>&ldquo; <?= $row['message'] ?> &rdquo;</p>
+                            </blockquote>
+                            <div class="author d-flex mt-4">
+                                <div class="name align-self-center"><?= $row['name'] ?> <span
+                                        class="position"><?= $row['country'] ?></span></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <?php
-            }
+                    <?php
+                }
+                ?>
+            </div>
+            <?php
+        else:
             ?>
-        </div>
+            <div class="text-center">Tidak Ada data.</div>
+            <?php
+        endif ?>
     </div>
 </section>
 <?php

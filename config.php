@@ -8,3 +8,4 @@ $db_password = '';
 
 // url 
 $base_url = '/pondok-gita-ubud';
+$asset_url = '/pondok-gita-ubud/assets';

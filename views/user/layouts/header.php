@@ -10,24 +10,19 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
 
-    <link rel="stylesheet" href="/pondok-gita-ubud/assets/user/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="/pondok-gita-ubud/assets/user/css/animate.css">
+    <link rel="stylesheet" href="<?= asset('/user/css/open-iconic-bootstrap.min.css') ?>">
+    <link rel="stylesheet" href="<?= asset('/user/css/animate.css') ?>">
+    <link rel="stylesheet" href="<?= asset('/user/css/owl.carousel.min.css') ?>">
+    <link rel="stylesheet" href="<?= asset('/user/css/owl.theme.default.min.css') ?>">
+    <link rel="stylesheet" href="<?= asset('/user/css/magnific-popup.css') ?>">
+    <link rel="stylesheet" href="<?= asset('/user/css/aos.css') ?>">
+    <link rel="stylesheet" href="<?= asset('/user/css/ionicons.min.css') ?>">
+    <link rel="stylesheet" href="<?= asset('/user/css/bootstrap-datepicker.css') ?>">
+    <link rel="stylesheet" href="<?= asset('/user/css/jquery.timepicker.css') ?>">
+    <link rel="stylesheet" href="<?= asset('/user/css/flaticon.css') ?>">
+    <link rel="stylesheet" href="<?= asset('/user/css/icomoon.css') ?>">
+    <link rel="stylesheet" href="<?= asset('/user/css/style.css') ?>">
 
-    <link rel="stylesheet" href="/pondok-gita-ubud/assets/user/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/pondok-gita-ubud/assets/user/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/pondok-gita-ubud/assets/user/css/magnific-popup.css">
-
-    <link rel="stylesheet" href="/pondok-gita-ubud/assets/user/css/aos.css">
-
-    <link rel="stylesheet" href="/pondok-gita-ubud/assets/user/css/ionicons.min.css">
-
-    <link rel="stylesheet" href="/pondok-gita-ubud/assets/user/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="/pondok-gita-ubud/assets/user/css/jquery.timepicker.css">
-
-
-    <link rel="stylesheet" href="/pondok-gita-ubud/assets/user/css/flaticon.css">
-    <link rel="stylesheet" href="/pondok-gita-ubud/assets/user/css/icomoon.css">
-    <link rel="stylesheet" href="/pondok-gita-ubud/assets/user/css/style.css">
 
     <!-- Placeholder untuk css dan style tambahan -->
     <?php
