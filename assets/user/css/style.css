@@ -18,8 +18,9 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #78d5ef;
-  --secondary: #6c757d;
+  --primary: #FCAC16;
+  --secondary: #846A45;
+  --tertiary: #4F4739;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
@@ -3167,16 +3168,16 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-  color: #78d5ef;
+  color: var(--primary);
   background-color: transparent;
   background-image: none;
-  border-color: #78d5ef;
+  border-color: var(--primary);
 }
 
 .btn-outline-primary:hover {
   color: #212529;
-  background-color: #78d5ef;
-  border-color: #78d5ef;
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .btn-outline-primary:focus,
@@ -3187,7 +3188,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-primary.disabled,
 .btn-outline-primary:disabled {
-  color: #78d5ef;
+  color: var(--primary);
   background-color: transparent;
 }
 
@@ -3195,8 +3196,8 @@ fieldset:disabled a.btn {
 .btn-outline-primary:not(:disabled):not(.disabled).active,
 .show>.btn-outline-primary.dropdown-toggle {
   color: #212529;
-  background-color: #78d5ef;
-  border-color: #78d5ef;
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
@@ -10440,13 +10441,13 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #c49b63;
+  color: var(--primary);
 }
 
 a:hover,
 a:active,
 a:focus {
-  color: #c49b63;
+  color: var(--primary);
   outline: none !important;
   text-decoration: none !important;
 }
@@ -10468,7 +10469,7 @@ h5,
 }
 
 .text-primary {
-  color: #c49b63 !important;
+  color: var(--primary) !important;
 }
 
 .ftco-navbar-light {
@@ -10526,7 +10527,7 @@ h5,
 
 .ftco-navbar-light .navbar-nav>.nav-item>.nav-link:hover,
 .ftco-navbar-light .navbar-nav>.nav-item>.nav-link:focus {
-  color: #c49b63;
+  color: var(--primary);
 }
 
 .ftco-navbar-light .navbar-nav>.nav-item>.nav-link:hover:after,
@@ -10619,8 +10620,8 @@ h5,
 
 .ftco-navbar-light .navbar-nav>.nav-item.cta>a {
   color: #fff;
-  border: 1px solid #c49b63;
-  background: #c49b63;
+  border: 1px solid var(--primary);
+  background: var(--primary);
   padding-top: .5rem;
   padding-bottom: .5rem;
   padding-left: 20px;
@@ -10639,21 +10640,21 @@ h5,
 }
 
 .ftco-navbar-light .navbar-nav>.nav-item.cta>a:hover {
-  background: #c49b63;
-  border: 1px solid #c49b63;
+  background: var(--primary);
+  border: 1px solid var(--primary);
 }
 
 .ftco-navbar-light .navbar-nav>.nav-item.cta.cta-colored span {
-  border-color: #c49b63;
+  border-color: var(--primary);
 }
 
 .ftco-navbar-light .navbar-nav>.nav-item.active>a {
-  color: #c49b63;
+  color: var(--primary);
 }
 
 .ftco-navbar-light .navbar-nav>.nav-item.active>a:after {
   opacity: 1;
-  background: #c49b63;
+  background: var(--primary);
 }
 
 .ftco-navbar-light .navbar-toggler {
@@ -10688,12 +10689,12 @@ h5,
 }
 
 .ftco-navbar-light.scrolled .nav-item.active>a {
-  color: #c49b63 !important;
+  color: var(--primary) !important;
 }
 
 .ftco-navbar-light.scrolled .nav-item.cta>a {
   color: #fff !important;
-  background: #c49b63;
+  background: var(--primary);
   border: none !important;
   padding-top: 0.5rem !important;
   padding-bottom: .5rem !important;
@@ -10712,7 +10713,7 @@ h5,
 }
 
 .ftco-navbar-light.scrolled .nav-item.cta.cta-colored span {
-  border-color: #c49b63;
+  border-color: var(--primary);
 }
 
 @media (max-width: 991.98px) {
@@ -10750,7 +10751,7 @@ h5,
 }
 
 .ftco-navbar-light.scrolled .nav-link.active {
-  color: #c49b63 !important;
+  color: var(--primary) !important;
 }
 
 .ftco-navbar-light.scrolled.awake {
@@ -10812,7 +10813,7 @@ h5,
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   margin-top: -10px;
-  color: #c49b63 !important;
+  color: var(--primary) !important;
   -moz-transition: all 0.7s ease;
   -o-transition: all 0.7s ease;
   -webkit-transition: all 0.7s ease;
@@ -10876,7 +10877,7 @@ h5,
   left: 0;
   right: 0;
   background: #000;
-  opacity: .3;
+  opacity: .6;
 }
 
 .owl-carousel.home-slider .slider-item .slider-text {
@@ -10900,7 +10901,7 @@ h5,
 .owl-carousel.home-slider .slider-item .slider-text .subheading {
   font-family: "Great Vibes", cursive;
   font-size: 30px;
-  color: #c49b63;
+  color: var(--primary);
 }
 
 .owl-carousel.home-slider .slider-item .slider-text h1 {
@@ -11059,7 +11060,7 @@ h5,
 }
 
 .bg-primary {
-  background: #c49b63;
+  background: var(--primary);
 }
 
 .btn {
@@ -11080,26 +11081,26 @@ h5,
 }
 
 .btn.btn-primary {
-  background: #c49b63;
-  border: 1px solid #c49b63;
+  background: var(--primary);
+  border: 1px solid var(--primary);
   color: #000;
 }
 
 .btn.btn-primary:hover {
-  border: 1px solid #c49b63;
+  border: 1px solid var(--primary);
   background: transparent;
-  color: #c49b63;
+  color: var(--primary);
 }
 
 .btn.btn-primary.btn-outline-primary {
-  border: 1px solid #c49b63;
+  border: 1px solid var(--primary);
   background: transparent;
-  color: #c49b63;
+  color: var(--primary);
 }
 
 .btn.btn-primary.btn-outline-primary:hover {
   border: 1px solid transparent;
-  background: #c49b63;
+  background: var(--primary);
   color: #fff;
 }
 
@@ -11125,8 +11126,8 @@ h5,
 .btn.btn-white.btn-outline-white:hover,
 .btn.btn-white.btn-outline-white:focus,
 .btn.btn-white.btn-outline-white:active {
-  background: #c49b63;
-  border-color: #c49b63;
+  background: var(--primary);
+  border-color: var(--primary);
   color: #000;
 }
 
@@ -11184,7 +11185,7 @@ h5,
 
 .ftco-intro .wrap .book {
   width: 35%;
-  background: #c49b63;
+  background: var(--primary);
 }
 
 @media (max-width: 767.98px) {
@@ -11210,7 +11211,7 @@ h5,
 }
 
 .ftco-intro .wrap .icon span {
-  color: #c49b63;
+  color: var(--primary);
   font-size: 20px;
 }
 
@@ -11246,7 +11247,7 @@ h5,
 
 .ftco-services {
   color: #1d150b;
-  background: #c49b63;
+  background: var(--primary);
 }
 
 .ftco-services .heading-section h2 {
@@ -11314,7 +11315,7 @@ h5,
 }
 
 .services-wrap .text .price span {
-  color: #c49b63;
+  color: var(--primary);
 }
 
 .ftco-gallery {
@@ -11350,7 +11351,7 @@ h5,
   width: 50px;
   height: 50px;
   content: '';
-  background: #c49b63;
+  background: var(--primary);
   z-index: -1;
   -moz-transition: all 0.6s ease;
   -o-transition: all 0.6s ease;
@@ -11435,7 +11436,7 @@ h5,
 
 .pricing-entry .text .price {
   width: 80px;
-  color: #c49b63;
+  color: var(--primary);
   text-align: right;
   background: #151111;
   background: url(../images/bg_4.jpg) no-repeat fixed;
@@ -11476,7 +11477,7 @@ h5,
 }
 
 .product-details button i {
-  color: #c49b63;
+  color: var(--primary);
 }
 
 .product-details .quantity-left-minus {
@@ -11494,7 +11495,7 @@ h5,
   height: 54px !important;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  color: #c49b63 !important;
+  color: var(--primary) !important;
   padding: 10px 20px;
 }
 
@@ -11514,11 +11515,11 @@ h5,
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  color: #c49b63;
+  color: var(--primary);
 }
 
 .product-details .form-group .icon span {
-  color: #c49b63;
+  color: var(--primary);
 }
 
 @media (max-width: 767.98px) {
@@ -11539,7 +11540,7 @@ h5,
 }
 
 .ftco-cart button i {
-  color: #c49b63;
+  color: var(--primary);
 }
 
 .ftco-cart .quantity-left-minus {
@@ -11557,7 +11558,7 @@ h5,
   height: 54px !important;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  color: #c49b63 !important;
+  color: var(--primary) !important;
   padding: 0;
 }
 
@@ -11577,11 +11578,11 @@ h5,
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  color: #c49b63;
+  color: var(--primary);
 }
 
 .ftco-cart .form-group .icon span {
-  color: #c49b63;
+  color: var(--primary);
 }
 
 @media (max-width: 767.98px) {
@@ -11616,7 +11617,7 @@ h5,
 }
 
 .table .thead-primary {
-  background: #c49b63;
+  background: var(--primary);
 }
 
 .table .thead-primary tr th {
@@ -11639,7 +11640,7 @@ h5,
 }
 
 .table tbody tr td.product-remove a:hover {
-  background: #c49b63;
+  background: var(--primary);
 }
 
 .table tbody tr td.product-remove a:hover span {
@@ -11703,7 +11704,7 @@ h5,
 }
 
 .cart-total p.total-price span:last-child {
-  color: #c49b63;
+  color: var(--primary);
 }
 
 .cart-total hr {
@@ -11786,7 +11787,7 @@ h5,
 
 .billing-form .form-control:focus,
 .billing-form .form-control:active {
-  border-color: #c49b63 !important;
+  border-color: var(--primary) !important;
 }
 
 .billing-form textarea.form-control {
@@ -11809,6 +11810,10 @@ h5,
 
 .ftco-menu {
   padding-top: 7em;
+}
+
+.section-reviews {
+  background-color: var(--tertiary) !important;
 }
 
 @media (max-width: 991.98px) {
@@ -11856,7 +11861,7 @@ h5,
   left: 0;
   right: 0;
   bottom: 0;
-  background: #c49b63;
+  background: var(--primary);
   opacity: 0;
 }
 
@@ -11984,7 +11989,7 @@ h5,
 }
 
 .staff .info h3 a {
-  color: #c49b63;
+  color: var(--primary);
 }
 
 .staff .info span.position {
@@ -12016,12 +12021,12 @@ h5,
   -webkit-box-shadow: 0px 3px 66px -24px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 3px 66px -24px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 3px 66px -24px rgba(0, 0, 0, 0.2);
-  border: 1px solid #c49b63;
+  border: 1px solid var(--primary);
 }
 
 .staff:hover .img,
 .staff:focus .img {
-  border: 1px solid #c49b63;
+  border: 1px solid var(--primary);
 }
 
 #ftco-testimony {
@@ -12047,7 +12052,7 @@ h5,
 }
 
 .testimony {
-  background: #c49b63;
+  background: var(--secondary);
   padding: 2em;
   color: #fff;
 }
@@ -12097,7 +12102,7 @@ h5,
 }
 
 .ftco-social a span {
-  color: #c49b63;
+  color: var(--primary);
 }
 
 .form-control {
@@ -12116,7 +12121,7 @@ h5,
 
 .form-control:focus,
 .form-control:active {
-  border-color: #c49b63;
+  border-color: var(--primary);
 }
 
 textarea.form-control {
@@ -12198,7 +12203,7 @@ textarea.form-control {
 }
 
 .bg-primary {
-  background: #c49b63 !important;
+  background: var(--primary) !important;
 }
 
 .ftco-section .ftco-sub-title {
@@ -12237,7 +12242,7 @@ textarea.form-control {
 .ftco-footer {
   font-size: 16px;
   padding: 7em 0;
-  background: #120f0f;
+  background: var(--tertiary);
 }
 
 .ftco-footer .ftco-footer-logo {
@@ -12300,7 +12305,7 @@ textarea.form-control {
 .ftco-footer .block-21 .text .heading a:hover,
 .ftco-footer .block-21 .text .heading a:active,
 .ftco-footer .block-21 .text .heading a:focus {
-  color: #c49b63;
+  color: var(--primary);
 }
 
 .ftco-footer .block-21 .text .meta>div {
@@ -12397,7 +12402,7 @@ textarea.form-control {
   display: block;
   margin-bottom: 0;
   font-family: "Great Vibes", cursive;
-  color: #c49b63;
+  color: var(--primary);
   line-height: 1;
   margin-bottom: -21px;
   z-index: 1;
@@ -12418,7 +12423,7 @@ textarea.form-control {
 }
 
 .heading-section h2 span {
-  color: #c49b63;
+  color: var(--primary);
 }
 
 .heading-section p.flip {
@@ -12463,7 +12468,7 @@ textarea.form-control {
   width: 6px;
   height: 6px;
   content: '';
-  background: #c49b63;
+  background: var(--primary);
   -webkit-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
   transform: rotate(135deg);
@@ -12478,7 +12483,7 @@ textarea.form-control {
   width: 10px;
   height: 10px;
   content: '';
-  background: #c49b63;
+  background: var(--primary);
   -webkit-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
   transform: rotate(135deg);
@@ -12493,7 +12498,7 @@ textarea.form-control {
   width: 6px;
   height: 6px;
   content: '';
-  background: #c49b63;
+  background: var(--primary);
   -webkit-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
   transform: rotate(135deg);
@@ -12518,7 +12523,7 @@ textarea.form-control {
   content: '';
   width: 40px;
   height: 1px;
-  background: #c49b63;
+  background: var(--primary);
   margin: 0 auto;
 }
 
@@ -12530,7 +12535,7 @@ textarea.form-control {
   content: '';
   width: 40px;
   height: 1px;
-  background: #c49b63;
+  background: var(--primary);
   margin: 0 auto;
 }
 
@@ -12620,7 +12625,7 @@ textarea.form-control {
   right: 0;
   bottom: 0;
   content: '';
-  bordeR: 1px solid #c49b63;
+  bordeR: 1px solid var(--primary);
   z-index: -1;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -12637,13 +12642,13 @@ textarea.form-control {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  color: #c49b63;
+  color: var(--primary);
 }
 
 .ftco-counter .text strong.number {
   font-weight: 400;
   font-size: 30px;
-  color: #c49b63;
+  color: var(--primary);
 }
 
 .ftco-counter .text span {
@@ -12661,7 +12666,7 @@ textarea.form-control {
   -webkit-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
   transform: rotate(135deg);
-  background: #c49b63;
+  background: var(--primary);
 }
 
 @media (max-width: 991.98px) {
@@ -12694,12 +12699,12 @@ textarea.form-control {
 .ftco-menu .nav-pills .nav-link {
   border-radius: 0;
   margin-bottom: 0;
-  color: #c49b63;
+  color: var(--primary);
   font-size: 18px;
   font-weight: 400;
   position: relative;
   display: inline-block;
-  border-bottom: 1px solid #c49b63;
+  border-bottom: 1px solid var(--primary);
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -12712,7 +12717,7 @@ textarea.form-control {
   -webkit-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background: #c49b63;
+  background: var(--primary);
   border-bottom: 1px solid transparent;
 }
 
@@ -12781,7 +12786,7 @@ textarea.form-control {
 .blog-entry .text .heading a:hover,
 .blog-entry .text .heading a:focus,
 .blog-entry .text .heading a:active {
-  color: #c49b63;
+  color: var(--primary);
 }
 
 .blog-entry .meta>div {
@@ -12857,7 +12862,7 @@ textarea.form-control {
 
 .block-27 ul li a,
 .block-27 ul li span {
-  color: #c49b63;
+  color: var(--primary);
   text-align: center;
   display: inline-block;
   width: 40px;
@@ -12869,7 +12874,7 @@ textarea.form-control {
 
 .block-27 ul li.active a,
 .block-27 ul li.active span {
-  background: #c49b63;
+  background: var(--primary);
   color: #fff;
   border: 1px solid transparent;
 }
@@ -12918,7 +12923,7 @@ textarea.form-control {
 
 .contact-form .form-control:focus,
 .contact-form .form-control:active {
-  border-color: #c49b63 !important;
+  border-color: var(--primary) !important;
 }
 
 .contact-form textarea.form-control {
@@ -12953,7 +12958,7 @@ textarea.form-control {
 .block-21 .text .heading a:hover,
 .block-21 .text .heading a:active,
 .block-21 .text .heading a:focus {
-  color: #c49b63;
+  color: var(--primary);
 }
 
 .block-21 .text .meta>div {
@@ -13005,7 +13010,7 @@ textarea.form-control {
   margin: 0;
   border-radius: 50% !important;
   font-size: 16px;
-  background: #c49b63;
+  background: var(--primary);
   color: #fff;
 }
 
@@ -13137,7 +13142,7 @@ textarea.form-control {
   padding-right: 50px;
   background: transparent !important;
   border: none;
-  border-bottom: 1px solid #c49b63;
+  border-bottom: 1px solid var(--primary);
   color: rgba(255, 255, 255, 0.7);
 }
 

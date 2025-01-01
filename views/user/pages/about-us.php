@@ -12,7 +12,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <section class="ftco-about d-md-flex mb-3">
-    <div class="one-half img" style="background-image: url(/pondok-gita-ubud/assets/user/images/bg-primary.jpg);"></div>
+    <div class="one-half img" style="background-image: url(<?= asset('/user/images/bg-about.jpeg') ?>);"></div>
     <div class="one-half ftco-animate">
         <div class="overlap">
             <div class="heading-section ftco-animate ">
@@ -33,7 +33,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </div>
 </section>
-<section class="ftco-menu">
+<section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-md-7 heading-section text-center ftco-animate">

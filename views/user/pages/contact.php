@@ -11,24 +11,26 @@ include __DIR__ . '/../components/breadcrumb.php';
                 <div class="row">
                     <div class="col-md-12 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
                         <div class="block-18 text-center">
-                            <div class="text">
-                                <div class="icon"><span class="flaticon-coffee-cup"></span></div>
+                            <a href="https://wa.me/6289668638094?text=Hello%20Pondok%20Gita%20Ubud..." target="_blank"
+                                class="text">
+                                <div class="icon"><span class="icon-whatsapp"></span></div>
                                 <span>+62 896 6863 8094</span>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
                         <div class="block-18 text-center">
-                            <div class="text">
-                                <div class="icon"><span> <i class="oi oi-mail"></i></span></div>
+                            <a href="mailto:pondokgita_ubud@yahoo.com?subject=Questions&body=Hello%20Pondok%20Gita%20Ubud..."
+                                target="_blank" class="text">
+                                <div class="icon"><span> <i class="icon-envelope"></i></span></div>
                                 <span>pondokgita_ubud@yahoo.com</span>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
                         <div class="block-18 text-center">
                             <div class="text">
-                                <div class="icon"><span class="flaticon-coffee-cup"></span></div>
+                                <div class="icon"><span class="icon-map-marker"></span></div>
                                 <span>Jl. Yudistira Timur, Peliatan, Ubud. </span>
                             </div>
                         </div>
@@ -39,7 +41,7 @@ include __DIR__ . '/../components/breadcrumb.php';
     </div>
 </section>
 
-<section>
+<section class="ftco-section">
     <div class="container">
         <div class="row block-9">
             <div class="col-md-6 ftco-animate">

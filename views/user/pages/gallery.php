@@ -1,4 +1,10 @@
 <?php
+ob_start();
+?>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+<?php
+$css = ob_get_clean();
+
 $pageTitle = 'Galeri';
 include_once 'connection.php';
 include __DIR__ . '/../layouts/header.php';
@@ -42,8 +48,9 @@ try {
                 foreach ($rows as $key => $row) {
                     ?>
                     <div class="col-md-4 mb-4 ftco-animate">
-                        <a href="gallery.html" class="gallery img d-flex align-items-center"
-                            style="background-image: url(<?= asset('/gallery/') . $row['link'] ?>); ">
+                        <a href="<?= asset('/gallery/') . $row['link'] ?>" data-fancybox="gallery"
+                            class="gallery img d-flex align-items-center"
+                            style="background-image: url(<?= asset('/gallery/') . $row['link'] ?>);">
                             <div class="icon mb-4 d-flex align-items-center justify-content-center">
                                 <span class="icon-search"></span>
                             </div>
@@ -55,9 +62,8 @@ try {
                 <div class="col-12 mb-4 ftco-animate text-center">
                     <p>Tidak ada gambar.</p>
                 </div>
-            <?php
-            endif
-            ?>
+                <?php
+            endif ?>
 
         </div>
         <div class="row mt-5">
@@ -110,7 +116,27 @@ try {
     </div>
 </section>
 
-
 <?php
+ob_start();
+?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Initialize FancyBox
+        $('[data-fancybox="gallery"]').fancybox({
+            // Optional FancyBox options
+            loop: true,
+            buttons: [
+                'slideShow',
+                'thumbs',
+                'zoom',
+                'close'
+            ],
+        });
+    });
+</script>
+<?php
+$js = ob_get_clean();
+
 include __DIR__ . '/../layouts/footer.php';
 ?>

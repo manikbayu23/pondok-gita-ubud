@@ -1,5 +1,6 @@
 <section class="home-slider owl-carousel">
-    <div class="slider-item" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio=" 0.5">
+    <div class="slider-item" style="background-image: url(<?= asset('/user/images/bg-secondary.jpeg') ?>);"
+        data-stellar-background-ratio=" 0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row slider-text justify-content-center align-items-center">

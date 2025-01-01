@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="<?= asset('/user/css/flaticon.css') ?>">
     <link rel="stylesheet" href="<?= asset('/user/css/icomoon.css') ?>">
     <link rel="stylesheet" href="<?= asset('/user/css/style.css') ?>">
+    <link rel="icon" href="<?= asset('/user/images/pondok-gita-logo.png') ?>" type="image/png">
 
 
     <!-- Placeholder untuk css dan style tambahan -->

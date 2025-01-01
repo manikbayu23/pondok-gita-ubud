@@ -1,7 +1,7 @@
 <div id="sidebar" class='active'>
     <div class="sidebar-wrapper active">
         <div class="sidebar-header">
-            <img src="<?= asset('/admin/assets/images/logo.svg') ?>" alt="" srcset="">
+            <img src="<?= asset('/user/images/pondok-gita-logo.png') ?>" alt="" srcset=""> Admin
         </div>
         <div class="sidebar-menu">
             <ul class="menu">
