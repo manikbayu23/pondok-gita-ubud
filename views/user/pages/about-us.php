@@ -1,18 +1,20 @@
 <?php
 include_once 'connection.php';
 
-$pageTitle = 'About Us';
+$title = $pageTitle = 'Tentang Kami';
 include __DIR__ . '/../layouts/header.php';
 include __DIR__ . '/../components/breadcrumb.php';
 
-$sql = "SELECT * FROM reviews ORDER BY id_review DESC LIMIT 10";
+$sql = "SELECT * FROM reviews WHERE status = '1' ORDER BY id_review DESC LIMIT 100";
 $stmt = $db->prepare($sql);
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<section class="ftco-about d-md-flex mb-3">
-    <div class="one-half img" style="background-image: url(<?= asset('/user/images/bg-about.jpeg') ?>);"></div>
+<section class="ftco-about d-md-flex">
+    <div class="one-half img">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QyOFpMdwjmo?si=z4Ryl22j2COTMM66" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
     <div class="one-half ftco-animate">
         <div class="overlap">
             <div class="heading-section ftco-animate ">
@@ -33,20 +35,21 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </div>
 </section>
-<section class="ftco-section">
+<section class="ftco-section" style="background-color: #08070A;">
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-md-7 heading-section text-center ftco-animate">
-                <h2 class="mb-4">Ulasan</h2>
+                <h2 class="mb-2">Ulasan</h2>
+                <p> Kami mendengarkan setiap cerita dan pengalaman Anda." Temukan apa yang membuat mereka jatuh cinta pada layanan kami.</p>
             </div>
         </div>
         <?php
         if (count($rows)):
-            ?>
+        ?>
             <div class="owl-carousel owl-theme">
                 <?php
                 foreach ($rows as $key => $row) {
-                    ?>
+                ?>
                     <div class="item">
                         <div class="testimony">
                             <blockquote>
@@ -58,15 +61,15 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             </div>
                         </div>
                     </div>
-                    <?php
+                <?php
                 }
                 ?>
             </div>
-            <?php
+        <?php
         else:
-            ?>
+        ?>
             <div class="text-center">Tidak Ada data.</div>
-            <?php
+        <?php
         endif ?>
     </div>
 </section>

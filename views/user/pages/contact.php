@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'Kontak';
+$title = $pageTitle = 'Kontak';
 include __DIR__ . '/../layouts/header.php';
 include __DIR__ . '/../components/breadcrumb.php';
 
@@ -9,7 +9,7 @@ include __DIR__ . '/../components/breadcrumb.php';
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <div class="row">
-                    <div class="col-md-12 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="col-md-12 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
                         <div class="block-18 text-center">
                             <a href="https://wa.me/6289668638094?text=Hello%20Pondok%20Gita%20Ubud..." target="_blank"
                                 class="text">
@@ -18,16 +18,25 @@ include __DIR__ . '/../components/breadcrumb.php';
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-12 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="col-md-12 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
                         <div class="block-18 text-center">
-                            <a href="mailto:pondokgita_ubud@yahoo.com?subject=Questions&body=Hello%20Pondok%20Gita%20Ubud..."
+                            <a href="https://www.instagram.com/pondokgitaubud/"
                                 target="_blank" class="text">
-                                <div class="icon"><span> <i class="icon-envelope"></i></span></div>
-                                <span>pondokgita_ubud@yahoo.com</span>
+                                <div class="icon"><span> <i class="icon-instagram"></i></span></div>
+                                <span>@pondokgitaubud</span>
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-12 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="col-md-12 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center">
+                            <a href="mailto:pondokgita@gmail.com?subject=Questions&body=Hello%20Pondok%20Gita%20Ubud..."
+                                target="_blank" class="text">
+                                <div class="icon"><span> <i class="icon-envelope"></i></span></div>
+                                <span>pondokgita@gmail.com</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
                         <div class="block-18 text-center">
                             <div class="text">
                                 <div class="icon"><span class="icon-map-marker"></span></div>
@@ -41,10 +50,15 @@ include __DIR__ . '/../components/breadcrumb.php';
     </div>
 </section>
 
-<section class="ftco-section">
+<section class="ftco-section" style="background-color: #08070A;">
     <div class="container">
         <div class="row block-9">
             <div class="col-md-6 ftco-animate">
+                <div class="row justify-content-center mb-5">
+                    <div class=" heading-section text-center ftco-animate">
+                        <h3 class="mb-2">Berikan Ulasan Anda:</h3>
+                    </div>
+                </div>
                 <form id="form-review" class="contact-form">
                     <div class="row">
                         <div class="col-md-6">
@@ -60,9 +74,6 @@ include __DIR__ . '/../components/breadcrumb.php';
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" name="country" placeholder="Country" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="subject" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
                         <textarea id="" cols="30" rows="7" name="message" class="form-control" placeholder="Message"
@@ -81,16 +92,23 @@ include __DIR__ . '/../components/breadcrumb.php';
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
-
         </div>
     </div>
 </section>
 
+
+<?php
+ob_start();
+?>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<?php
+$js = ob_get_clean();
+?>
 <?php
 ob_start();
 ?>
 <script>
-    $('#form-review').submit(function (e) {
+    $('#form-review').submit(function(e) {
         e.preventDefault();
 
         const form = $(this);
@@ -100,10 +118,30 @@ ob_start();
             url: '/pondok-gita-ubud/review',
             data: form.serialize(),
             dataType: 'json',
-            success: function (response) {
-                alert('success');
-            }, error: function (error) {
-                alert('error');
+            success: function(response) {
+                if (response.success) {
+                    Swal.fire({
+                        title: 'Success',
+                        text: response.message,
+                        icon: 'success',
+                        timer: 1500,
+                    }).then((result) => {
+                        window.location.reload();
+                    })
+                } else {
+                    Swal.fire({
+                        title: 'Gagal',
+                        text: response.message,
+                        icon: 'error'
+                    })
+                }
+            },
+            error: function(error) {
+                Swal.fire({
+                    title: 'Error',
+                    text: 'Terjadi kesalahan jaringan.',
+                    icon: 'error'
+                })
             }
         });
 

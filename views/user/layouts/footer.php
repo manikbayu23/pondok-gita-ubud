@@ -20,14 +20,17 @@
                         <ul>
                             <li><span class="icon icon-map-marker"></span><span class="text">Jl. Yudistira Timur,
                                     Peliatan, Ubud.
-                                    /span></li>
+                                </span></li>
                             <li><a href="https://wa.me/6289668638094?text=Hello%20Pondok%20Gita%20Ubud..."
                                     target="_blank"><span class="icon icon-whatsapp"></span><span class="text">+62 896
                                         6863
                                         8094</span></a></li>
-                            <li><a href="mailto:pondokgita_ubud@yahoo.com?subject=Questions&body=Hello%20Pondok%20Gita%20Ubud..."
+                            <li><a href="https://www.instagram.com/pondokgitaubud/"
+                                    target="_blank"><span class="icon icon-instagram"></span><span
+                                        class="text">@pondokgitaubud</span></a></li>
+                            <li><a href="mailto:pondokgita@gmail.com?subject=Questions&body=Hello%20Pondok%20Gita%20Ubud..."
                                     target="_blank"><span class="icon icon-envelope"></span><span
-                                        class="text">pondokgita_ubud@yahoo.com</span></a></li>
+                                        class="text">pondokgita@gmail.com</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -38,7 +41,9 @@
 
                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     Copyright &copy;
-                    <script>document.write(new Date().getFullYear());</script> All rights reserved | <a
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script> All rights reserved | <a
                         href="https://colorlib.com" target="_blank">Pondok Gita Ubud</a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </p>
@@ -46,6 +51,13 @@
         </div>
     </div>
 </footer>
+
+<div class="whatsapp-button">
+    <a href="https://wa.me/6281234567890" target="_blank" aria-label="Hubungi kami di WhatsApp">
+        <i class=" icon-whatsapp"></i>
+    </a>
+</div>
+
 
 <!-- loader -->
 <div id="ftco-loader" class="show fullscreen">

@@ -5,7 +5,7 @@ ob_start();
 <?php
 $css = ob_get_clean();
 
-$pageTitle = 'Galeri';
+$title = $pageTitle = 'Galeri';
 include_once 'connection.php';
 include __DIR__ . '/../layouts/header.php';
 include __DIR__ . '/../components/breadcrumb.php';
@@ -46,7 +46,7 @@ try {
             <?php
             if (count($rows) > 0):
                 foreach ($rows as $key => $row) {
-                    ?>
+            ?>
                     <div class="col-md-4 mb-4 ftco-animate">
                         <a href="<?= asset('/gallery/') . $row['link'] ?>" data-fancybox="gallery"
                             class="gallery img d-flex align-items-center"
@@ -62,7 +62,7 @@ try {
                 <div class="col-12 mb-4 ftco-animate text-center">
                     <p>Tidak ada gambar.</p>
                 </div>
-                <?php
+            <?php
             endif ?>
 
         </div>
@@ -121,7 +121,7 @@ ob_start();
 ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
         // Initialize FancyBox
         $('[data-fancybox="gallery"]').fancybox({
             // Optional FancyBox options

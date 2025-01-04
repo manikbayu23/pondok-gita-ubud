@@ -13,7 +13,7 @@ $stmt = $db->prepare($sql);
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$title = 'Home';
+$title = $pageTitle = 'Home';
 include __DIR__ . '/../layouts/header.php';
 ?>
 
@@ -39,11 +39,10 @@ include __DIR__ . '/../layouts/header.php';
 
 <section class="ftco-section">
     <div class="container">
-        <div class="row justify-content-center mb-5">
+        <div class="row justify-content-center mb-2">
             <div class="col-md-7 heading-section text-center ftco-animate">
-                <h2 class="mb-4">Fasilitas Speial</h2>
-                <!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                    live the blind texts.</p> -->
+                <h2 class="mb-2">Fasilitas Spesial</h2>
+                <p> Menikmati pengalaman terbaik dengan fasilitas istimewa yang dirancang khusus untuk memenuhi kebutuhan Anda.</p>
             </div>
         </div>
         <div class="row d-md-flex">
@@ -53,7 +52,7 @@ include __DIR__ . '/../layouts/header.php';
                         <?php
                         if (count($rows) > 0):
                             foreach ($rows as $key => $row) {
-                                ?>
+                        ?>
                                 <div class="col-md-4 ftco-animate">
                                     <div class="media d-block text-center block-6 services">
                                         <div class="icon d-flex justify-content-center align-items-center mb-5">
@@ -65,7 +64,7 @@ include __DIR__ . '/../layouts/header.php';
                                         </div>
                                     </div>
                                 </div>
-                                <?php
+                            <?php
                             }
                         else:
                             ?>
@@ -100,7 +99,7 @@ ob_start();
 ?>
 <script>
     console.log("Hello from Index page!");
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function() {
         // alert("Index page is loaded!");
     });
 </script>

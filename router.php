@@ -65,6 +65,10 @@ if (strpos($route, '/admin') === 0) {
             isAuthenticated();
             $file = "{$path}/reviews.php";
             break;
+        case '/admin/reviews-controller':
+            isAuthenticated();
+            $file = "controllers/admin/reviews-controller.php";
+            break;
         case '/admin/login': // Rute login tetap bisa diakses jika belum login
             redirectIfAuthenticated();
             $file = "{$path}/login.php";
@@ -101,7 +105,7 @@ if (strpos($route, '/admin') === 0) {
             $file = "{$path}/contact.php";
             break;
         case '/review':
-            $file = "controllers/user/review-controller.php";
+            $file = "controllers/user/reviews-controller.php";
             break;
         default:
             $file = 'views/404.php'; // Halaman 404 jika route tidak ditemukan

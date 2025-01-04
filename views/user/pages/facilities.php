@@ -9,7 +9,7 @@ $css = ob_get_clean();
 
 
 <?php
-$pageTitle = 'Fasilitas';
+$title = $pageTitle = 'Fasilitas';
 include __DIR__ . '/../layouts/header.php';
 include __DIR__ . '/../components/breadcrumb.php';
 
@@ -25,7 +25,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="row">
             <?php
             foreach ($rows as $key => $row) {
-                ?>
+            ?>
                 <div class="col-md-6 ftco-animate">
                     <div class="media d-flex block-6 services">
                         <div class="icon d-flex justify-content-center align-items-center mb-5 mr-3">
@@ -37,7 +37,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         </div>
                     </div>
                 </div>
-                <?php
+            <?php
             }
             ?>
         </div>
