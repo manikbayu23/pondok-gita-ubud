@@ -52,6 +52,8 @@ AOS.init({
       autoplayHoverPause: false,
       items: 1,
       navText: ["<span class='ion-md-arrow-back'></span>", "<span class='ion-chevron-right'></span>"],
+      mouseDrag: false, // Nonaktifkan drag dengan mouse
+      touchDrag: false, // Nonaktifkan drag dengan sentuhan
       responsive: {
         0: {
           items: 1,
@@ -67,30 +69,30 @@ AOS.init({
         },
       },
     });
-    $(".carousel-work").owlCarousel({
-      autoplay: true,
-      center: true,
-      loop: true,
-      items: 1,
-      margin: 30,
-      stagePadding: 0,
-      nav: true,
-      navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
-      responsive: {
-        0: {
-          items: 1,
-          stagePadding: 0,
-        },
-        600: {
-          items: 2,
-          stagePadding: 50,
-        },
-        1000: {
-          items: 3,
-          stagePadding: 100,
-        },
-      },
-    });
+    // $(".carousel-work").owlCarousel({
+    //   autoplay: true,
+    //   center: true,
+    //   loop: true,
+    //   items: 1,
+    //   margin: 30,
+    //   stagePadding: 0,
+    //   nav: true,
+    //   navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+    //   responsive: {
+    //     0: {
+    //       items: 1,
+    //       stagePadding: 0,
+    //     },
+    //     600: {
+    //       items: 2,
+    //       stagePadding: 50,
+    //     },
+    //     1000: {
+    //       items: 3,
+    //       stagePadding: 100,
+    //     },
+    //   },
+    // });
   };
   carousel();
 

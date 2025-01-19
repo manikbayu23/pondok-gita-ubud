@@ -25,9 +25,9 @@
                                     target="_blank"><span class="icon icon-whatsapp"></span><span class="text">+62 896
                                         6863
                                         8094</span></a></li>
-                            <li><a href="https://www.instagram.com/pondokgitaubud/"
-                                    target="_blank"><span class="icon icon-instagram"></span><span
-                                        class="text">@pondokgitaubud</span></a></li>
+                            <li><a href="https://www.instagram.com/pondokgitaubud/" target="_blank"><span
+                                        class="icon icon-instagram"></span><span class="text">@pondokgitaubud</span></a>
+                            </li>
                             <li><a href="mailto:pondokgita@gmail.com?subject=Questions&body=Hello%20Pondok%20Gita%20Ubud..."
                                     target="_blank"><span class="icon icon-envelope"></span><span
                                         class="text">pondokgita@gmail.com</span></a></li>
@@ -43,8 +43,7 @@
                     Copyright &copy;
                     <script>
                         document.write(new Date().getFullYear());
-                    </script> All rights reserved | <a
-                        href="https://colorlib.com" target="_blank">Pondok Gita Ubud</a>
+                    </script> All rights reserved | <a href="https://colorlib.com" target="_blank">Pondok Gita Ubud</a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </p>
             </div>
@@ -82,7 +81,7 @@
 <script src="<?= asset('/user/js/scrollax.min.js') ?>"></script>
 <script src="<?= asset('/user/js/google-map.js') ?>"></script>
 <script src="<?= asset('/user/js/main.js') ?>"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
 
 <!-- Placeholder untuk script tambahan -->
 <?php
