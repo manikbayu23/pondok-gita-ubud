@@ -80,6 +80,10 @@ if (strpos($route, '/admin') === 0) {
             isAuthenticated();
             $file = "controllers/admin/auth-controller.php";
             break;
+        case '/admin/store':
+            isAuthenticated();
+            $file = "controllers/admin/auth-controller.php";
+            break;
         default:
             isAuthenticated();
             $file = "{$path}/dashboard.php";

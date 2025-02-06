@@ -50,7 +50,7 @@
                                 </div>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item" href="#"><i data-feather="user"></i> Ubah Password</a>
+                                <!-- <a class="dropdown-item" href="#"><i data-feather="user"></i> Ubah Password</a> -->
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="<?= route('/admin/logout') . '?name=logout' ?>"><i
                                         data-feather="log-out"></i> Logout</a>
