@@ -24,12 +24,13 @@ include __DIR__ . '/../layouts/header.php';
             <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="false">
 
                 <div class="col-md-8 col-sm-12 text-left ftco-animate">
-                    <span class="subheading">Welcome to</span>
+                    <span class="subheading">Selamat Datang</span>
                     <h1 class="mb-4">Pondok Gita Ubud</h1>
                     <p class="mb-4 mb-md-5">Selamat datang di Pondok Gita Ubud, destinasi impian Anda di jantung Bali.
                         Dikelilingi oleh keindahan alam Ubud, kami menawarkan akomodasi mewah dengan suasana yang tenang
                         dan menenangkan. </p>
-                    <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Get Started</a> </p>
+                    <p><a href="<?= route('/facilities') ?>" class="btn btn-primary p-3 px-xl-4 py-xl-3">Lihat
+                            Fasilitas</a> </p>
                 </div>
 
             </div>

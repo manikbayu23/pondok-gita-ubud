@@ -20,8 +20,7 @@ include __DIR__ . '/../components/breadcrumb.php';
                     </div>
                     <div class="col-md-12 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
                         <div class="block-18 text-center">
-                            <a href="https://www.instagram.com/pondokgitaubud/"
-                                target="_blank" class="text">
+                            <a href="https://www.instagram.com/pondokgitaubud/" target="_blank" class="text">
                                 <div class="icon"><span> <i class="icon-instagram"></i></span></div>
                                 <span>@pondokgitaubud</span>
                             </a>
@@ -54,13 +53,57 @@ include __DIR__ . '/../components/breadcrumb.php';
     <div class="container">
         <div class="row block-9">
             <div class="col-md-6 ftco-animate">
-                <div class="row justify-content-center mb-5">
+                <div class="row justify-content-center mb-3">
                     <div class=" heading-section text-center ftco-animate">
                         <h3 class="mb-2">Berikan Ulasan Anda:</h3>
                     </div>
                 </div>
                 <form id="form-review" class="contact-form">
                     <div class="row">
+                        <div class="col-12">
+                            <div class="rating">
+                                <input type="radio" id="star-1" name="star-radio" value="5">
+                                <label for="star-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path pathLength="360"
+                                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
+                                        </path>
+                                    </svg>
+                                </label>
+                                <input type="radio" id="star-2" name="star-radio" value="4">
+                                <label for="star-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path pathLength="360"
+                                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
+                                        </path>
+                                    </svg>
+                                </label>
+                                <input type="radio" id="star-3" name="star-radio" value="3">
+                                <label for="star-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path pathLength="360"
+                                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
+                                        </path>
+                                    </svg>
+                                </label>
+                                <input type="radio" id="star-4" name="star-radio" value="2">
+                                <label for="star-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path pathLength="360"
+                                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
+                                        </path>
+                                    </svg>
+                                </label>
+                                <input type="radio" id="star-5" name="star-radio" value="1">
+                                <label for="star-5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path pathLength="360"
+                                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z">
+                                        </path>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <input type="text" class="form-control" name="name" placeholder="Your Name" required>
@@ -108,7 +151,7 @@ $js = ob_get_clean();
 ob_start();
 ?>
 <script>
-    $('#form-review').submit(function(e) {
+    $('#form-review').submit(function (e) {
         e.preventDefault();
 
         const form = $(this);
@@ -118,7 +161,7 @@ ob_start();
             url: '/pondok-gita-ubud/review',
             data: form.serialize(),
             dataType: 'json',
-            success: function(response) {
+            success: function (response) {
                 if (response.success) {
                     Swal.fire({
                         title: 'Success',
@@ -136,7 +179,7 @@ ob_start();
                     })
                 }
             },
-            error: function(error) {
+            error: function (error) {
                 Swal.fire({
                     title: 'Error',
                     text: 'Terjadi kesalahan jaringan.',

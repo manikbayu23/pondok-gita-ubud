@@ -13,7 +13,10 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <section class="ftco-about d-md-flex">
     <div class="one-half img">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QyOFpMdwjmo?si=z4Ryl22j2COTMM66" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/RFBh3H6b1uE?si=cY0f0pDroOizr1WC"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <div class="one-half ftco-animate">
         <div class="overlap">
@@ -21,7 +24,8 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <h2 class="mb-4">Pondok Gita Ubud</h2>
             </div>
             <div>
-                <p>Pondok Gita Ubud, didirikan pada tahun 2023 oleh Ibu Ni Wayan Sukerti, menawarkan akomodasi nyaman
+                <p style="text-align: justify">Pondok Gita Ubud, didirikan pada tahun 2023 oleh Ibu Ni Wayan Sukerti,
+                    menawarkan akomodasi nyaman
                     dan terjangkau di Jl. Yudistira Timur, Peliatan, Ubud. Dengan empat kamar berfasilitas lengkap,
                     seperti AC, kamar mandi modern, serta akses WiFi gratis, kami menjadi pilihan ideal bagi wisatawan
                     dengan anggaran terbatas. Kami juga menyediakan balkon dan teras untuk bersantai, serta parkir
@@ -40,16 +44,17 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="row justify-content-center mb-5">
             <div class="col-md-7 heading-section text-center ftco-animate">
                 <h2 class="mb-2">Ulasan</h2>
-                <p> Kami mendengarkan setiap cerita dan pengalaman Anda." Temukan apa yang membuat mereka jatuh cinta pada layanan kami.</p>
+                <p> Kami mendengarkan setiap cerita dan pengalaman Anda." Temukan apa yang membuat mereka jatuh cinta
+                    pada layanan kami.</p>
             </div>
         </div>
         <?php
         if (count($rows)):
-        ?>
+            ?>
             <div class="owl-carousel owl-theme">
                 <?php
                 foreach ($rows as $key => $row) {
-                ?>
+                    ?>
                     <div class="item">
                         <div class="testimony">
                             <blockquote>
@@ -59,17 +64,22 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <div class="name align-self-center"><?= $row['name'] ?> <span
                                         class="position"><?= $row['country'] ?></span></div>
                             </div>
+                            <div class="mt-2 d-flex justify-content-end">
+                                <?php for ($i = 0; $i < $row['rate']; $i++) {
+                                    echo '<span class="icon icon-star ml-1" style="font-size: 1.4rem"></span>';
+                                } ?>
+                            </div>
                         </div>
                     </div>
-                <?php
+                    <?php
                 }
                 ?>
             </div>
-        <?php
+            <?php
         else:
-        ?>
+            ?>
             <div class="text-center">Tidak Ada data.</div>
-        <?php
+            <?php
         endif ?>
     </div>
 </section>
@@ -78,7 +88,7 @@ ob_start();
 ?>
 <script>
     $('.owl-carousel').owlCarousel({
-        loop: true,
+        loop: false,
         margin: 10,
         nav: true,
         autoplay: true,

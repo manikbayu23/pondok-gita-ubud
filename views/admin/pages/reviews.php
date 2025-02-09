@@ -22,6 +22,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <thead>
                             <tr>
                                 <th>No</th>
+                                <th class="text-center">Rating</th>
                                 <th>Nama</th>
                                 <th>Email</th>
                                 <th>Country</th>
@@ -34,13 +35,22 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <?php
                             if (count($rows) > 0):
                                 foreach ($rows as $key => $row) {
-                            ?>
+                                    ?>
                                     <tr>
                                         <td><?= $key + 1 ?></td>
+                                        <td>
+                                            <div class="d-flex"><?php
+                                            for ($i = 0; $i < $row['rate']; $i++) {
+                                                echo '<i data-feather="star"></i>';
+                                            }
+                                            ?></div>
+                                        </td>
                                         <td><?= $row['name'] ?></td>
                                         <td><?= $row['email'] ?></td>
                                         <td><?= $row['country'] ?></td>
-                                        <td class="text-center"><?= $row['status'] ? '<span class="badge bg-success"><i data-feather="eye"></i> Dtampilkan</span>' : '<span class="badge bg-secondary"><i data-feather="eye-off"></i> Disembunyikan</span>' ?></td>
+                                        <td class="text-center">
+                                            <?= $row['status'] ? '<span class="badge bg-success"><i data-feather="eye"></i> Dtampilkan</span>' : '<span class="badge bg-secondary"><i data-feather="eye-off"></i> Disembunyikan</span>' ?>
+                                        </td>
                                         <td><?= $row['message'] ?></td>
                                         <td class="text-center">
                                             <?php
@@ -52,7 +62,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                             ?>
                                         </td>
                                     </tr>
-                                <?php
+                                    <?php
                                 }
                             else:
                                 ?>
@@ -82,7 +92,7 @@ ob_start();
 <script>
     var endpoint = '<?= route('/admin/reviews-controller') ?>';
 
-    $('.btn-action').click(function() {
+    $('.btn-action').click(function () {
         const id = $(this).data('id');
         const value = $(this).data('value');
         const text = value == 1 ? 'Ditampilkan' : 'Disembunyikan';
@@ -100,7 +110,7 @@ ob_start();
                         value: value
                     },
                     dataType: 'json',
-                    success: function(response) {
+                    success: function (response) {
                         if (response.success) {
                             Swal.fire({
                                 title: 'Success',
@@ -118,7 +128,7 @@ ob_start();
                             })
                         }
                     },
-                    error: function(error) {
+                    error: function (error) {
                         Swal.fire({
                             title: 'Error',
                             text: 'Terjadi kesalahan jaringan.',
